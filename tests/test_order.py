@@ -21,26 +21,9 @@ def test_select_dish_to_order():
     menu_mock = Mock()
     order = Order(menu_mock)
     couscous_dish = Mock()
-    #menu_mock[couscous_dish] = True
     order.select_dish(couscous_dish)
     order.select_dish(couscous_dish)
     assert order.ordered_dishes[couscous_dish] == 2
-
-"""
-Given an dish item that is not on the menu or that is unavailable,
-the item shouldnt be added and an error message should be sent.
-"""
-# def test_select_dish_to_order():
-#     menu_mock = Mock()
-#     order = Order(menu_mock)
-#     couscous_dish = Mock()
-#     #menu_mock.dishes[couscous_dish] = False
-#     #with pytest.raises(Exception) as e: 
-#     #    order.select_dish(couscous_dish)
-#     #error_message = str(e.value)
-#     #assert error_message == "No reminder set!"
-#     order.select_dish(couscous_dish)
-#     assert order.ordered_dishes[couscous_dish] == 2
 
 """
 Given an order with a few dishes

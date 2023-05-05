@@ -31,8 +31,6 @@ class Order:
         #   dish:  the dish to be added to the ordered dishes
         # Side Effects:
         #   adds the selected dish to the dictionary of ordered items
-        #if dish not in self.menu.keys() or self.menu[dish] == False:
-        #    raise Exception("Cannot chose this item since it is not part of the menu")
         if dish in self.ordered_dishes.keys():
             self.ordered_dishes[dish] += 1
         else:
